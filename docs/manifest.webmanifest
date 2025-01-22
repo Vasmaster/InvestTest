@@ -1,6 +1,6 @@
 {
-    "name": "SofiaInvest",
-    "short_name": "SofiaInvest",
+    "name": "TestInvest",
+    "short_name": "TestInvest",
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#231F20",

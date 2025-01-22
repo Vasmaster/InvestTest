@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-SofiaInvest-1.0.0";
+const cacheName = "DefaultCompany-TestInvest-1.0.2";
 const contentToCache = [
     "Build/docs.loader.js",
     "Build/docs.framework.js",
