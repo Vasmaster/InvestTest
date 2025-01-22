@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | SofiaInvest</title>
+    <title>Unity Web Player | InvestTest</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <title>Unity WebGL with AR.js</title>
@@ -18,10 +18,6 @@
             <div id="unity-progress-bar-empty">
                 <div id="unity-progress-bar-full"></div>
             </div>
-        </div>
-        <div id="qr-code-container" style="text-align: center; margin-top: 20px;">
-            <img src="TemplateData/frame.png" alt="Scan the QR Code" width="250">
-            <p>Scan the QR code to access this page on your mobile device.</p>
         </div>
         <div id="unity-warning"> </div>
         <div id="unity-footer">
@@ -131,13 +127,13 @@
         } else {
             // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
             canvas.style.width = "960px";
-            canvas.style.height = "1200px";
+            canvas.style.height = "600px";
         }
 
         document.querySelector("#unity-loading-bar").style.display = "block";
-        document.querySelector('a-scene').addEventListener('loaded', function () {
-            document.querySelector('.arjs-loader').style.display = 'none';
-        });
+      //  document.querySelector('a-scene').addEventListener('loaded', function () {
+     //       document.querySelector('.arjs-loader').style.display = 'none';
+      //  });
 
         var script = document.createElement("script");
         script.src = loaderUrl;
