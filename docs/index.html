@@ -19,7 +19,7 @@
                 <div id="unity-progress-bar-full"></div>
             </div>
         </div>
-        <div id="qr-code-container" style="text-align: center; margin-top: 20px;">
+        <div id="qr-code-container" style="text-align: center; margin-top: 20px; color:linen">
             <img src="TemplateData/trex-image-big.jpeg" alt="SofiaInvest SI" width="250">
             <p>(image is placeholder) Welcome to SofiaInvest SI AR template page</p>
         </div>
@@ -161,17 +161,13 @@
         };
 
         document.body.appendChild(script);
-
-    </script>
-
-    <script>
         document.addEventListener("DOMContentLoaded", () => {
             let unityCanvas = document.querySelector("#unity-canvas");
             let arScene = document.querySelector("a-scene");
 
             if (arScene && unityCanvas) {
-                arScene.style.zIndex = "1";  // Bring AR.js to the front
-                unityCanvas.style.zIndex = "2";  // Make Unity overlay it
+                arScene.style.zIndex = "2";  // Bring AR.js to the front
+                unityCanvas.style.zIndex = "1";  // Make Unity overlay it
 
                 arScene.addEventListener("camera-init", () => {
                     console.log("AR.js camera initialized!");
@@ -179,7 +175,6 @@
             }
         });
     </script>
-
 </body>
 </html>
 
