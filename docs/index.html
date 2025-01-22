@@ -20,8 +20,8 @@
             </div>
         </div>
         <div id="qr-code-container" style="text-align: center; margin-top: 20px;">
-            <img src="TemplateData/frame.png" alt="Scan the QR Code" width="250">
-            <p>Scan the QR code to access this page on your mobile device.</p>
+            <img src="TemplateData/trex-image-big.jpeg" alt="SofiaInvest SI" width="250">
+            <p>(image is placeholder) Welcome to SofiaInvest SI AR template page</p>
         </div>
         <div id="unity-warning"> </div>
         <div id="unity-footer">
@@ -103,7 +103,7 @@
         // Set this to false if you want to decouple this synchronization from
         // happening inside the engine, and you would instead like to size up
         // the canvas DOM size and WebGL render target sizes yourself.
-      //config.matchWebGLToCanvasSize = true;
+        //config.matchWebGLToCanvasSize = true;
 
         // If you would like all file writes inside Unity Application.persistentDataPath
         // directory to automatically persist so that the contents are remembered when
@@ -136,10 +136,10 @@
             canvas.style.height = "100%";
             canvas.style.position = "absolute";
             canvas.style.background = "none";
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        //   canvas.style.width = "960px";
-        //   canvas.style.height = "600px";
-          }
+            // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+            //   canvas.style.width = "960px";
+            //   canvas.style.height = "600px";
+        }
 
         document.querySelector("#unity-loading-bar").style.display = "block";
 
@@ -163,6 +163,23 @@
         document.body.appendChild(script);
 
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let unityCanvas = document.querySelector("#unity-canvas");
+            let arScene = document.querySelector("a-scene");
+
+            if (arScene && unityCanvas) {
+                arScene.style.zIndex = "1";  // Bring AR.js to the front
+                unityCanvas.style.zIndex = "2";  // Make Unity overlay it
+
+                arScene.addEventListener("camera-init", () => {
+                    console.log("AR.js camera initialized!");
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
 
