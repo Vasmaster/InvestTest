@@ -24,7 +24,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.0);
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -38,7 +38,11 @@
             }
     </style>
 </head>
-<body>
+<body style="margin : 0px; overflow: hidden;">
+    <!-- minimal loader shown until image descriptors are loaded -->
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
         <div id="unity-loading-bar">
@@ -79,7 +83,7 @@
             </a-entity>
         </a-nft>
         <a-entity camera></a-entity>
-       <!-- <a-camera position="0 0 0"> look-controls-enabled="false"></a-camera>-->
+        <!-- <a-camera position="0 0 0"> look-controls-enabled="false"></a-camera>-->
     </a-scene>
 
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="background: transparent;"></canvas>
