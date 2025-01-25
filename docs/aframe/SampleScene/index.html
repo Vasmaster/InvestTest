@@ -17,11 +17,19 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
+var Cube_0 = document.querySelector("#Cube_0");
+var Sphere_1 = document.querySelector("#Sphere_1");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
+});
+Cube_0.addEventListener("mousedown", function(evt){
+open("https://investsofia.com/");
+});
+Sphere_1.addEventListener("mousedown", function(evt){
+open("https://www.instagram.com/invest_sofia/");
 });
 
         fullbutton.addEventListener("click", function (evt) {
@@ -101,12 +109,14 @@ if (markerFound == 1) {
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" preset="hiro" emitevents="true" button>
+<a-marker id="marker" type="pattern" preset="custom" src="pattern-frame 1.patt" url="pattern-frame 1.patt" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-box width="0.1" height="0.1" depth="0.1" class="intersectable" position="0 0.145 0" rotation="0 0 0" color="#FFFFFF" 
-></a-box>
+<a-sphere radius="0.075" class="intersectable" position="-0.292 0.145 0.305" rotation="0 -180 0" color="#00FF0A" 
+></a-sphere>
+<a-sphere radius="0.075" class="intersectable" position="-0.307 0.079 -0.308" rotation="0 0 0" color="#FF00A0" 
+></a-sphere>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
