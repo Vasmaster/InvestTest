@@ -25,23 +25,12 @@ markerFound = 1;
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-    // Function to handle click or touch events
-    function handleInteraction(url) {
-            window.open(url, "_blank");
-        }
-
 Cube_0.addEventListener("mousedown", function(evt){
 open("https://investsofia.com/");
 });
-Cube_0.addEventListener("touchstart", function(evt){
-            handleInteraction("https://investsofia.com/");
-        });
 Sphere_1.addEventListener("mousedown", function(evt){
 open("https://www.instagram.com/invest_sofia/");
 });
-Sphere_1.addEventListener("touchstart", function(evt){
-            handleInteraction("https://www.instagram.com/invest_sofia/");
-        });
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -120,7 +109,7 @@ if (markerFound == 1) {
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" type="pattern" preset="custom" src="pattern-frame.patt" url="pattern-frame.patt" emitevents="true" button>
+<a-marker id="marker" type="pattern" preset="custom" src="pattern-logo-invest-sofia.patt" url="pattern-logo-invest-sofia.patt" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
